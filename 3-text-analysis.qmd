@@ -2,6 +2,10 @@
 title: Text Analysis (A)
 ---
 
+> ⚠️ CHANGE THE ENVIRONMENT
+> Select `gesis-tests-W` ....
+> ![](environment-no-gt.png)
+
 ```{python}
 import pandas as pd
 import spacy

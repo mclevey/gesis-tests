@@ -2,6 +2,10 @@
 title: Obtaining Data
 ---
 
+> ⚠️ CHANGE THE ENVIRONMENT
+> Select `gesis-tests-W` ....
+> ![](environment-no-gt.png)
+
 ```{python}
 from collections import Counter
 import re

@@ -2,6 +2,10 @@
 title: Network Analysis
 ---
 
+> ⚠️ CHANGE THE ENVIRONMENT
+> Select `Python 3.13.2` to access `graph-tool`.
+> ![](environment-gt.png)
+
 ```{python}
 import pandas as pd
 from graph_tool import Graph
