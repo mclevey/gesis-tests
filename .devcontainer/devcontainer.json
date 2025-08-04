@@ -1,11 +1,7 @@
 {
 	"name": "graph-tool",
-	// "image": "tiagopeixoto/graph-tool",
-	"build": {
-		"dockerfile": "Dockerfile",
-		"context": ".."
-	},
-	"postCreateCommand": "poetry install",
+	"image": "tiagopeixoto/graph-tool",
+	"postCreateCommand": "pip install poetry && poetry install",
 	"remoteUser": "root",
 	"customizations": {
 		"vscode": {
