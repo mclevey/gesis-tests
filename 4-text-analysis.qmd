@@ -1,0 +1,10 @@
+---
+title: Text Analysis (B)
+---
+
+```{python}
+import pandas as pd
+from graph_tool import Graph
+from graph_tool.draw import sfdp_layout, graph_draw
+from graph_tool.inference import minimize_nested_blockmodel_dl
+```
