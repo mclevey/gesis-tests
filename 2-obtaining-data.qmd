@@ -3,8 +3,48 @@ title: Obtaining Data
 ---
 
 ```{python}
+from collections import Counter
+import re
+import requests
+import numpy as np
 import pandas as pd
-from graph_tool import Graph
-from graph_tool.draw import sfdp_layout, graph_draw
-from graph_tool.inference import minimize_nested_blockmodel_dl
+import seaborn as sns
+import matplotlib.pyplot as plt
+from io import StringIO
+from urllib.parse import urljoin, urlparse
+from bs4 import BeautifulSoup
+import time
+import json
+import warnings
+
+warnings.filterwarnings("ignore")
+```
+
+```{python}
+url = "https://en.wikipedia.org/w/index.php?title=World_Happiness_Report&oldid=1241093905"
+
+response = requests.get(url)
+print(f"Status code: {response.status_code}")
+print(f"Content length: {len(response.content)} bytes")
+print(f"Content type: {response.headers.get('content-type', 'Unknown')}")
+```
+
+```{python}
+# Explore the response object
+print("Status code:", response.status_code)
+print("Response headers (first 5):")
+for i, (key, value) in enumerate(response.headers.items()):
+    if i < 5:
+        print(f"  {key}: {value}")
+    else:
+        break
+
+# Look at the first 1000 characters of HTML
+print("\nFirst 1000 characters of HTML:")
+print(response.text[:1000])
+```
+
+```{python}
+html_content = response.text
+soup = BeautifulSoup(html_content, 'html.parser')
 ```

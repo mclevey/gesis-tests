@@ -1,7 +1,7 @@
 {
 	"name": "graph-tool",
 	"image": "tiagopeixoto/graph-tool",
-	// "postCreateCommand": "pip install poetry && poetry install",
+	"postCreateCommand": "bash -c 'if ! command -v quarto &> /dev/null; then curl -L https://github.com/quarto-dev/quarto-cli/releases/latest/download/quarto-linux-amd64.tar.gz | tar -xz -C /tmp && mv /tmp/quarto-*/bin/quarto /usr/local/bin/ && rm -rf /tmp/quarto-* && echo \"Quarto installed successfully\"; else echo \"Quarto already installed\"; fi'",
 	"remoteUser": "root",
 	"customizations": {
 		"vscode": {

@@ -4,7 +4,17 @@ title: Text Analysis (A)
 
 ```{python}
 import pandas as pd
-from graph_tool import Graph
-from graph_tool.draw import sfdp_layout, graph_draw
-from graph_tool.inference import minimize_nested_blockmodel_dl
+import spacy
+import requests
+import matplotlib.pyplot as plt
+import matplotlib.ticker as ticker
 ```
+
+```{python}
+!python -m spacy download en_core_web_sm
+```
+
+```{python}
+nlp = spacy.load("en_core_web_sm")
+```
+
