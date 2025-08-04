@@ -1,7 +1,7 @@
 {
 	"name": "graph-tool",
 	"image": "tiagopeixoto/graph-tool",
-	"postCreateCommand": "pip install poetry && poetry install",
+	// "postCreateCommand": "pip install poetry && poetry install",
 	"remoteUser": "root",
 	"customizations": {
 		"vscode": {
